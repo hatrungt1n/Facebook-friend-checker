@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "facebook_friend_tracker"
+version = "0.0.1"
+description = "Facebook friend tracker"
+readme = "README.rst"
+authors = [
+  {name = "Facebook Friend Tracker", email = "hatrungtin2k2@gmail.com"}
+]
+maintainers = [
+  {name = "Facebook Friend Tracker", email = "hatrungtin2k2@gmail.com"}
+]
+classifiers = [
+
+]
+license = {text = "Not open source"}
+dependencies = [
+  "typer"
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage",  # testing
+    "mypy",  # linting
+    "pytest",  # testing
+    "ruff"  # linting
+]
+
+[project.urls]
+
+bugs = "https://github.com/hatrungt1n/facebook_friend_tracker/issues"
+changelog = "https://github.com/hatrungt1n/facebook_friend_tracker/blob/master/changelog.md"
+homepage = "https://github.com/hatrungt1n/facebook_friend_tracker"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
+
+
+
+# Mypy
+# ----
+
+[tool.mypy]
+files = "."
+
+# Use strict defaults
+strict = true
+warn_unreachable = true
+warn_no_return = true
+
+[[tool.mypy.overrides]]
+# Don't require test functions to include types
+module = "tests.*"
+allow_untyped_defs = true
+disable_error_code = "attr-defined"
+
