@@ -1,5 +1,5 @@
 """Console script for facebook_friend_tracker."""
-import facebook_friend_tracker
+import main
 
 import typer
 from rich.console import Console
