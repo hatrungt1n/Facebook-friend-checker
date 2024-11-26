@@ -1,6 +1,10 @@
 # src/storage.py
 import json
-from src.config import FRIENDS_FILE
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+FRIENDS_FILE = os.getenv("FRIENDS_FILE")
 
 class FriendStorage:
     """Handles saving and loading the friend list."""

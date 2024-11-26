@@ -1,6 +1,10 @@
 # src/logger.py
 from datetime import datetime
-from src.config import LOG_FILE
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+LOG_FILE = os.getenv("LOG_FILE")
 
 class EventLogger:
     """Handles logging unfriend events."""

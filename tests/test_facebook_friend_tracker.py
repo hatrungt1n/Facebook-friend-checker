@@ -5,7 +5,7 @@
 
 import unittest
 
-from facebook_friend_tracker import facebook_friend_tracker
+from main import facebook_friend_tracker
 
 
 class TestFacebook_friend_tracker(unittest.TestCase):

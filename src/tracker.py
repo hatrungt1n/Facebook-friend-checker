@@ -1,8 +1,8 @@
 # src/tracker.py
-from src.fetcher import FriendFetcher
-from src.storage import FriendStorage
-from src.logger import EventLogger
-from src.notifier import Notifier
+from fetcher import FriendFetcher
+from storage import FriendStorage
+from logger import EventLogger
+from notifier import Notifier
 
 class FriendTracker:
     """Tracks and handles unfriending events."""

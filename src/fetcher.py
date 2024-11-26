@@ -1,6 +1,11 @@
 # src/fetcher.py
 import requests
-from src.config import ACCESS_TOKEN, GRAPH_API_URL
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+GRAPH_API_URL = os.getenv("GRAPH_API_URL")
+ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
 
 class FriendFetcher:
     """Handles fetching friend list from Facebook Graph API."""
@@ -13,6 +18,7 @@ class FriendFetcher:
                 params={"access_token": ACCESS_TOKEN}
             )
             data = response.json()
+            print("data: ", data)
             if "error" in data:
                 raise Exception(f"API Error: {data['error']['message']}")
             

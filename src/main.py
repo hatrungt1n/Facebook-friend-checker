@@ -1,6 +1,6 @@
 # main.py
 import time
-from src.tracker import FriendTracker
+from tracker import FriendTracker
 
 if __name__ == "__main__":
     while True:
